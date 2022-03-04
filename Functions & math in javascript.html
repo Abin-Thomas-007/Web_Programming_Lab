@@ -1,0 +1,65 @@
+<!-- Create a HTML page to explain the use of various predefined functions in a 
+string and math object in java script. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions & math in javascript</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+</head>
+
+<body>
+    <p id="round"></p>
+    <p id="floor"></p>
+    <p id="Sign"></p>
+    <p id="power"></p>
+    <p id="squareroot"></p>
+    <p id="absolute"></p>
+    <p id="sine"></p>
+    <p id="cos"></p>
+    <p id="tan"></p>
+    <p id="lowest value"></p>
+    <p id="highest value"></p>
+    <p id="random value"></p>
+    <p id="log value"></p>
+    <p id="base 2 log value"></p>
+    <p id="base 10 log value"></p>
+    <p id="pi value"></p>
+    <p id="ceil"></p>
+
+    <script>
+        document.getElementById("round").innerHTML = "<p><b>Decimal rounding : &nbsp;&nbsp;</b>" + Math.ceil(4.4) + "</p>";
+        document.getElementById("floor").innerHTML = "<p><b>Decimal Flooring : &nbsp;&nbsp;</b>" + Math.floor(4.7) + "</p>";
+        document.getElementById("Sign").innerHTML = "<p><b>Number Signing: &nbsp;&nbsp;</b>" + Math.sign(-4) + "</p>";
+        document.getElementById("power").innerHTML = "<p><b>x to the power of y: &nbsp;&nbsp;</b>" + Math.pow(8, 2) + "</p>";
+        document.getElementById("squareroot").innerHTML = Math.sqrt(64);
+        document.getElementById("absolute").innerHTML = Math.abs(-4.4);
+        document.getElementById("sine").innerHTML = "The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+        document.getElementById("cos").innerHTML = "The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+        document.getElementById("tan").innerHTML = Math.tan(1);
+        document.getElementById("lowest value").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+        document.getElementById("highest value").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+        document.getElementById("random value").innerHTML = Math.random();
+        document.getElementById("log value").innerHTML = Math.log(3);
+        document.getElementById("base 2 log value").innerHTML = Math.log2(8);
+        document.getElementById("base 10 log value").innerHTML = Math.log10(1000);
+        document.getElementById("pi value").innerHTML = Math.PI;
+        document.getElementById("ceil").innerHTML = Math.ceil(7.87);
+
+        var square_root_of_2 = Math.SQRT2
+        document.write("The Value is : " + square_root_of_2 +"<br><br>");
+
+        var square_root_of_1by2 = Math.SQRT1_2
+        document.write("The Value is : " + square_root_of_1by2 +"<br><br>");
+
+        var natural_logarithm_of_2 = Math.LN2
+        document.write("The Value is : " + natural_logarithm_of_2 +"<br><br>");
+
+        var BASE_10_logarithm_of_E = Math.LOG10E
+        document.write("The Value is : " + BASE_10_logarithm_of_E);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.bodysty{
+    box-sizing: border-box;
+    background-color: rgba(248, 244, 238, 0.842);
+    padding: 50px;
+}
+
+#para{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-style: oblique;
+}

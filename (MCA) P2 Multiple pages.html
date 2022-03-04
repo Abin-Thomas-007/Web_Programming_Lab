@@ -1,0 +1,74 @@
+<!-- CREATE A HTML FILE TO LINK A DIFFERENT HTML PAGE WHICH CONTAINS IMAGES,TABLES AND ALSO LINK WITHIN A PAGE. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML page which contains images, tables, and link within a page</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+    <style>
+        body {
+            /* background-image: url(../Images/Friends.jpeg); */
+            background-image: url(Images/Friends.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header #logo {
+            box-shadow: 2px 1px 50px #ccc;
+            border-radius: 10px;
+        }
+
+        .navigation_bar {
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .navigation_bar a {
+            padding: 14px 16px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .navigation_bar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .navigation_bar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <center>
+            <img src="Images/LMCST-collegelogo.png" id="logo">
+            <h3>College Code: <span>LMC</span></h3>
+        </center>
+    </div>
+
+    <div class="navigation_bar">
+        <center>
+            <nav>
+                <a class="active" href="#HOME">Home</a>
+                <a href="Contacts.html">Contacts </a>
+                <a href="#ACADEMICS">Academics</a>
+                <a href="(MCA) P5 Registration form.html">Registration</a>
+                <a href="#PLACEMENT">Placement</a>
+                <a href="#ABOUT US">About us</a>
+            </nav>
+        </center>
+    </div><br>
+
+</body>
+
+</html>
