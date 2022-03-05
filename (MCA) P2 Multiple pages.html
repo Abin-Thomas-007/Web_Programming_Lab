@@ -9,9 +9,14 @@
     <title>HTML page which contains images, tables, and link within a page</title>
     <link rel="icon" href="Images/lightning.png" type="image/x-icon">
     <style>
+        * {
+            box-sizing: border-box;
+            border-radius: 22px;
+        }
+
         body {
-            /* background-image: url(../Images/Friends.jpeg); */
-            background-image: url(Images/Friends.jpeg);
+            /* background-image: url(../Images/.jpg); */
+            background-image: url(Images/Greenleaf.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -19,30 +24,81 @@
         }
 
         .header #logo {
-            box-shadow: 2px 1px 50px #ccc;
-            border-radius: 10px;
-        }
-
-        .navigation_bar {
-            overflow: hidden;
-            align-items: center;
+            box-shadow: 2px 1px 80px rgb(0, 0, 0);
         }
 
         .navigation_bar a {
+            display: block;
             padding: 14px 16px;
             text-decoration: none;
             text-align: center;
-            font-size: 23px;
+            font-size: 20px;
+            color: #ddd;
         }
 
         .navigation_bar a.active {
-            background-color: #04AA6D;
+            background-color: #e7397c;
             color: white;
         }
 
         .navigation_bar a:hover {
             background-color: #ddd;
             color: black;
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+
+        li a {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 14px 16px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #parac {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 900;
+        }
+
+        .content {
+            margin-top: 25px;
+            font-size: 21px;
+            text-align: center;
+            color: white;
+            animation: fadein 2s;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .conimg {
+            box-shadow: 2px 2px 80px rgb(0, 0, 0);
+        }
+
+        #about { 
+            box-sizing: border-box;
+            border-color: blanchedalmond;
+            font-size: larger;
+            color: rgb(255, 255, 255);
+            padding: 18px;
+            border: 1px solid black;
+            border-radius: 25px;
+        }
+
+        .h1about{
+            color: rgb(255, 255, 255);
         }
     </style>
 </head>
@@ -57,17 +113,38 @@
     </div>
 
     <div class="navigation_bar">
-        <center>
-            <nav>
-                <a class="active" href="#HOME">Home</a>
-                <a href="Contacts.html">Contacts </a>
-                <a href="#ACADEMICS">Academics</a>
-                <a href="(MCA) P5 Registration form.html">Registration</a>
-                <a href="#PLACEMENT">Placement</a>
-                <a href="#ABOUT US">About us</a>
-            </nav>
-        </center>
+        <ul>
+            <li><a class="active" href="#HOME">HOME</a></li>
+            <li><a href="#ACADEMICS">ACADEMICS</a></li>
+            <li><a href="(MCA) P3 Registration form.html">REGISTRATION</a></li>
+            <li><a href="Feedback.html">FEEDBACK</a></li>
+            <li><a href="Table- Staff details.html">STAFF DETAILS</a></li>
+            <li><a href="#About us">ABOUT US</a></li>
+        </ul>
     </div><br>
+
+    <div class="content">
+        <p id="parac">Welocme to the Unofficial website of <br>
+            Lourdes Matha College of Science and Technology,Kuttichal
+        </p>
+        <img name="intro_img" id="conimg" src="Images/intro_img.png" alt="image cant be loaded" height="550px"
+            width="800px">
+    </div>
+
+    <div class="main">
+        <h1 id="About us" class="h1about">About Us: </h1>
+        <div id="about">
+            <p align="center">
+                LMCST having 19 years of academic excellence, was established in the year 2002 by the Lourdes Matha Catholic Educational 
+                Society and is being managed by the Archdiocese of Changanacherry. The campus is spread over 25 acres at Kuttichal, in the 
+                vicinity of the capital city, a scenic location with the picturesque lush greenery in the backdrop of misty 
+                Western Ghats, the perfect ambience for academic pursuit. We have excellent infrastructure, smart class rooms, laboratories, 
+                hostels, modern conference halls and amenities for co-curricular and extra-curricular activities. Well experienced and 
+                dedicated faculty imparting quality education has been the hall mark of our college. <br>
+                <a href="https://lmcst.ac.in/"> For More...</a>
+            </p>
+        </div>
+    </div>
 
 </body>
 
