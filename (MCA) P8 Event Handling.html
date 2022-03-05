@@ -1,0 +1,59 @@
+<!-- EVALUATING JAVA SCRIPT EVENT HANDLING FOR EVERY CLICK OF A BUTTON TO CHANGE THE BACKGROUND COLOR OF A HTML PAGE. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+    <style>
+        button{
+            border-style: none;
+            background-color: rgb(185, 255, 127);
+            font-size: larger;
+            border-radius: 8px;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button:hover{
+            color: rgb(255, 255, 255);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 style="color: green;">HELLO WORLD </h1>
+        <h2> DOM style background Color property</h2><br>
+        <button onclick="newcolor()">Submit</button>
+        <button onclick="nochange()">Revert</button><br><br>
+        <div id="DREAM">
+            <h1> WELCOME TO NEW WORLD </h1>
+        </div>
+        <div id="POWER">
+            <h1>LET'S SEE THE POWER </h1>
+        </div>
+
+        <script>
+            function newcolor() {
+                document.getElementById("DREAM").style.backgroundColor = "red";
+                document.getElementById("DREAM").style.color = "white";
+                document.getElementById("POWER").style.backgroundColor = "blue";
+                document.getElementById("POWER").style.color = "white";
+            }
+
+            function nochange(){
+                document.getElementById("DREAM").style.backgroundColor = "";
+                document.getElementById("DREAM").style.color = "";
+                document.getElementById("POWER").style.backgroundColor = "";
+                document.getElementById("POWER").style.color = "";
+            }
+        </script>
+    </center>
+</body>
+
+</html>

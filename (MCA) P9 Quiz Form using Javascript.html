@@ -1,0 +1,70 @@
+<!-- DESIGNING QUIZ APPLICATION PERSONAL INFORMATION SYSTEM USING JAVA SCRIPT. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Form</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+    <style>
+        h1 {
+            color: brown;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p {
+            font-size: 23px;
+            font-weight: 900;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: blueviolet;
+        }
+
+        span{
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            border-style: none;
+            background-color: rgb(185, 255, 127);
+            font-size: larger;
+            border-radius: 8px;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button:hover {
+            color: rgb(255, 255, 255);
+            background-color: blue;
+        }
+    </style>
+    <script src="(MCA) P9 Quiz.js"></script>
+</head>
+
+<body>
+    <h1 align="center">QUIZ APPLICATION BASED ON JAVASCRIPT</h1><br>
+    <form id="quiz" name="quiz">
+        <center>
+            <p class="question">What is the captital of bihar?</p>
+                <input type="radio" id="mc" name="question1" value="Patna"><span>Patna</span>  <br>
+                <input type="radio" id="mc" name="question1" value="Bhuvaneshwar"><span>Bhuvaneshwar</span> <br>
+            <p class="question">what is the capital of kerala?</p>
+                <input type="radio" id="mc" name="question2" value="Thiruvananthapuram"><span>Thiruvananthapuram </span><br>
+                <input type="radio" id="mc" name="question2" value="Kollam"><span>Kollam</span>
+            <p class="question">What is the capital of gujarat?</p>
+                <input type="radio" id="mc" name="question3" value="Gandhinagar"><span>Gandhinagar</span> <br>
+                <input type="radio" id="mc" name="question3" value="Goa"><span>Goa</span> <br>
+            <br><br>
+            <button onclick="check()"><span>Click me</span></button>
+        </center>
+    </form>
+    <br><br>
+    <p id="message"></p>
+    <div id="aftersubmit">
+        <p id="number_correct"></p>
+    </div>
+</body>
+
+</html>

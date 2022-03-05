@@ -1,0 +1,167 @@
+<!-- CREATE A HTML REGISTERATION FORM AND VALIDATE THE FORM USING JAVA SCRIPT CODE. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Form Validation</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            box-shadow: #e44f4f;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("Images/backwaters.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main {
+            padding: 25px;
+        }
+
+        label {
+            color: rgb(255, 255, 255);
+        }
+
+        input {
+            font-size: 14px;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=number],
+        select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=number]:focus,
+        input[type=email]:focus,
+        select:focus {
+            background-color: rgb(190, 237, 255);
+            outline: none;
+        }
+
+        .registerbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function registration() {
+            var name = document.getElementById("t1").value;
+            var email = document.getElementById("t2").value;
+            var umobile = document.getElementById("t3").value;
+            var pwd = document.getElementById("t4").value;
+            var cpwd = document.getElementById("t5").value;
+            var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+            if (name == '') {
+                alert('Please Enter Your Name');
+                name.focus();
+                return false;
+            } 
+            else if (email == '') {
+                alert('Please Enter Your Email id');
+                email.focus();
+                return false;
+            } 
+            else if (umobile == '') {
+                alert('Please Enter Your Mobile No.');
+                email.focus();
+                return false;
+            } 
+            else if (pwd == '') {
+                alert('Please Enter The Password');
+                pwd.focus();
+                return false;
+            } 
+            else if (cpwd == '') {
+                alert('Please Enter The Confirm Password');
+                cpwd.focus();
+                return false;
+            } 
+            else if (!pwd_expression.test(pwd)) {
+                alert('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+            } 
+            else if (pwd != cpwd) {
+                alert('Password not Matched');
+            } 
+            else if (document.getElementById("t5").value.length < 6) {
+                alert('Password minimum length is 6');
+            } 
+            else if (document.getElementById("t5").value.length > 12) {
+                alert('Password max length is 12');
+            } 
+            else {
+                alert('Thank You for Login & You are Redirecting to LMCST') = "(MCA) P2 Multiple pages.html";
+            }
+        }
+
+        function clearFunc() {
+            document.getElementById("t1").value = "";
+            document.getElementById("t2").value = "";
+            document.getElementById("t3").value = "";
+            document.getElementById("t4").value = "";
+            document.getElementById("t5").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <h2 align="center">Create Your Account</h2>
+        <form class="login">
+            <label for=""> Enter FullName :
+                <input type="text" placeholder="Enter user here" id="t1" class="tb" maxlength="30" required></td>
+            </label><br><br>
+            <label for="">Enter Email ID :
+                <input type="email" placeholder="Enter Email ID here" id="t2" class="tb" maxlength="30" required>
+            </label><br><br>
+            <label for="">Enter Mobile no. :
+                <input type="number" placeholder="Enter Username here" id="t3" class="tb" maxlength="13"required>
+            </label><br><br>
+            <label for="">Enter Password :
+                <input type="password" placeholder="Enter Password here" 
+                    Pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    id="t4" class="tb" maxlength="12" required>
+            </label><br><br>
+            <label for="">Enter Confirm Password :
+                <input type="password" id="t5" class="tb" placeholder="Enter confirm password here"
+                    Pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    maxlength="12" required>
+            </label><br><br><br><br>
+            <input type="reset" value="Clear Form" id="res" class="registerbtn" onclick="clearFunc()" >
+            <input type="submit" value="Create Account" class="registerbtn" onclick="registration()">
+        </form>
+    </div>
+
+</body>
+
+</html>

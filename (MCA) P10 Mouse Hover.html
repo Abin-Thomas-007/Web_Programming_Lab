@@ -1,0 +1,82 @@
+<!-- CREATE A HTML PAGE TO DISPLAY NEW IMAGE AND TEXT WHEN THE MOUSE 
+    COMES OVER THE EXISTING CONTENT USING JAVA SCRIPT EVENT HANDLING. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover program</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+    <style>
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: brown;
+        }
+
+        p {
+            color: blue;
+            font-size: 19px;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: black;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #ffffff4f;
+        }
+
+        .overlay:hover {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 35px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Fade in Overlay</h1><br>
+    <center>
+        <p>Hover over the image to see the effect.</p>
+        <div class="container">
+            <img src="Images/Groot.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <p class="text" onmouseover="style.color='Black'" onmouseout="style.color='white'"> I'am Groot </p>
+            </div>
+        </div>
+    </center>
+
+</body>
+
+</html>
