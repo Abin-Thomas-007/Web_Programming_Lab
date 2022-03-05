@@ -1,0 +1,135 @@
+<!-- CREATE A HTML PAGE TO EXPLAIN THE USE OF VARIOUS PREDEFINED 
+FUCTIONS IN A STRING AND MATH OBJECT IN A JAVASCRIPT. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions & math in javascript</title>
+    <link rel="icon" href="Images/lightning.png" type="image/x-icon">
+    <style>
+        p {
+            font-size: large;
+        }
+
+        b {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JAVASCRIPT Math Functions</h1>
+    <p id="round"></p>
+    <p id="floor"></p>
+    <p id="Sign"></p>
+    <p id="power"></p>
+    <p id="squareroot"></p>
+    <p id="absolute"></p>
+    <p id="sine"></p>
+    <p id="cos"></p>
+    <p id="tan"></p>
+    <p id="lowest value"></p>
+    <p id="highest value"></p>
+    <p id="random value"></p>
+    <p id="log value"></p>
+    <p id="base 2 log value"></p>
+    <p id="base 10 log value"></p>
+    <p id="pi value"></p>
+    <p id="ceil"></p>
+
+    <script>
+        document.getElementById("round").innerHTML = "<p><b>Decimal rounding 4.4: &nbsp;&nbsp;</b>" + Math.ceil(4.4) +
+            "</p>";
+        document.getElementById("floor").innerHTML = "<p><b>Decimal Flooring of 4.7: &nbsp;&nbsp;</b>" + Math.floor(
+            4.7) +
+            "</p>";
+        document.getElementById("Sign").innerHTML = "<p><b>Number Signing -4: &nbsp;&nbsp;</b>" + Math.sign(-4) +
+        "</p>";
+        document.getElementById("power").innerHTML = "<p><b>8 to the power of 2: &nbsp;&nbsp;</b>" + Math.pow(8, 2) +
+            "</p>";
+        document.getElementById("squareroot").innerHTML = "<p><b>Square root of 64: &nbsp;&nbsp;</b>" + Math.sqrt(64) +
+            "</p>";
+        document.getElementById("absolute").innerHTML = "<p><b>Absolute Value of -4.4: &nbsp;&nbsp;</b>" + Math.abs(-
+                4.4) +
+            "</p>";
+        document.getElementById("sine").innerHTML = "<p><b>The sine value of 90 degrees is: &nbsp;&nbsp;</b>" + Math
+            .sin(90 * Math.PI / 180) +
+            "</p>";
+        document.getElementById("cos").innerHTML = "<p><b>The cosine value of 0 degrees is: &nbsp;&nbsp;</b>" + Math
+            .cos(0 * Math.PI / 180) +
+            "</p>";
+        document.getElementById("tan").innerHTML = "<p><b>Tan value of 1: &nbsp;&nbsp;</b>" + Math.tan(1) +
+            "</p>";
+        document.getElementById("lowest value").innerHTML = "<p><b>Lowest value: &nbsp;&nbsp;</b>" + Math.min(0, 150,
+                30, 20, -8, -200) +
+            "</p>";
+        document.getElementById("highest value").innerHTML = "<p><b>Highest Value: &nbsp;&nbsp;</b>" + Math.max(0, 150,
+                30, 20, -8, -200) +
+            "</p>";
+        document.getElementById("random value").innerHTML = "<p><b>Random no. generation: &nbsp;&nbsp;</b>" + Math
+            .random() +
+            "</p>";
+        document.getElementById("log value").innerHTML = "<p><b>Log of 3: &nbsp;&nbsp;</b>" + Math.log(3) +
+            "</p>";
+        document.getElementById("base 2 log value").innerHTML = "<p><b>Log of base2 of 8: &nbsp;&nbsp;</b>" + Math.log2(
+                8) +
+            "</p>";
+        document.getElementById("pi value").innerHTML = "<p><b>Value of PI: &nbsp;&nbsp;</b>" + Math.PI +
+            "</p>";
+        document.getElementById("ceil").innerHTML = "<p><b>Ceil value of 7.87: &nbsp;&nbsp;</b>" + Math.ceil(7.87) +
+            "</p>";
+
+        var square_root_of_2 = Math.SQRT2
+        document.write("<p><b>The Value of square_root_of_2: </b>" + square_root_of_2 + "</p>");
+
+        var square_root_of_1by2 = Math.SQRT1_2
+        document.write("<p><b>The Value of square_root_of_1by2: </b>" + square_root_of_1by2 + "</p>");
+
+        var natural_logarithm_of_2 = Math.LN2
+        document.write("<p><b>The Value of natural_logarithm_of_2: </b>" + natural_logarithm_of_2 + "</p>");
+
+        var BASE_10_logarithm_of_E = Math.LOG10E
+        document.write("<p><b>The Value of BASE_10_logarithm_of_E: </b>" + BASE_10_logarithm_of_E) + "</p>";
+    </script>
+
+    <br><br>
+    <h1>JAVASCRIPT String</h2>
+    <p id="Slength"></p>
+    <p id="Scomp"></p>
+    <p id="Sslice"></p>
+    <p id="Sadd"></p>
+    <p id="Sfirst"></p>
+    <p id="Slast"></p>
+    <p id="Sboth"></p>
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("Slength").innerHTML = "<p><b>The length property returnes the length of a string : </b>" + text.length + "</p>";
+
+        let x = "John";        // x is a string
+        let y = new String("John");  // y is an object
+        document.getElementById("Scomp").innerHTML = "<p><b>Comparing two strings : </b>" + (x==y) + "</p>";
+
+        let arr = "Apple, Banana, Kiwi";
+        document.getElementById("Sslice").innerHTML =  "<p><b>Slicing the strings : </b>" + arr.slice(7) + "</p>";
+
+        let text1 = "Hello";
+        let text2 = "World!";
+        let text3 = text1.concat(" ",text2);
+        document.getElementById("Sadd").innerHTML = "<p><b>Add two strings : </b>" + text3 + "</p>";
+
+        let first = "Please locate where 'locate' occurs!";
+        document.getElementById("Sfirst").innerHTML = "<p><b>The indexOf() method returns the position of the first occurrence of a specified text : </b>" + first.indexOf("locate") + "</p>";
+
+        let last = "Please locate where 'locate' occurs!";
+        document.getElementById("Slast").innerHTML = "<p><b>The lastIndexOf() method returns the position of the last occurrence of a specified text : </b>" + last.lastIndexOf("locate") + "</p>";
+
+        let both = "Please locate where 'locate' occurs!";
+        document.getElementById("Sboth").innerHTML = "<p><b>Both indexOf(), and lastIndexOf() return -1 if the text is not found : </b>" + both.indexOf("John") + "</p>";
+    </script>
+
+</body>
+
+</html>
